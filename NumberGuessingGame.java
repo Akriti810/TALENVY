@@ -9,9 +9,9 @@ public class NumberGuessingGame {
         
         boolean playAgain = true;
         while (playAgain) {
-            int randomNumber = random.nextInt(100) + 1; // Generate number between 1 and 100
+            int randomNumber = random.nextInt(100) + 1; // Generating number
             int attempts = 0;
-            int maxAttempts = 7; // Limit attempts
+            int maxAttempts = 7; // Apply Limit 
             boolean guessedCorrectly = false;
             
             System.out.println("\nWelcome to the Number Guessing Game!");
