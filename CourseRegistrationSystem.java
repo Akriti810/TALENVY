@@ -77,9 +77,9 @@ class Student {
     public void registerCourse(Course course) {
         if (course.enrollStudent()) {
             registeredCourses.add(course);
-            System.out.println("✅ Successfully registered for " + course.getTitle());
+            System.out.println(" Successfully registered for " + course.getTitle());
         } else {
-            System.out.println("❌ Course is full. Cannot register.");
+            System.out.println(" Course is full. Cannot register.");
         }
     }
 
@@ -88,16 +88,16 @@ class Student {
             if (course.getCode().equals(courseCode)) {
                 course.dropStudent();
                 registeredCourses.remove(course);
-                System.out.println("✅ Successfully dropped " + course.getTitle());
+                System.out.println(" Successfully dropped " + course.getTitle());
                 return;
             }
         }
-        System.out.println("❌ You are not registered in this course.");
+        System.out.println(" You are not registered in this course.");
     }
 
     public void displayRegisteredCourses() {
         if (registeredCourses.isEmpty()) {
-            System.out.println("📌 No courses registered.");
+            System.out.println(" No courses registered.");
             return;
         }
         System.out.println("Registered Courses:");
@@ -154,10 +154,10 @@ public class CourseRegistrationSystem {
                     viewRegisteredCourses();
                     break;
                 case 6:
-                    System.out.println("📌 Exiting the system. Goodbye!");
+                    System.out.println(" Exiting the system. Goodbye!");
                     return;
                 default:
-                    System.out.println("❌ Invalid choice. Please try again.");
+                    System.out.println(" Invalid choice. Please try again.");
             }
         }
     }
@@ -168,7 +168,7 @@ public class CourseRegistrationSystem {
         System.out.print("Enter Student Name: ");
         String name = scanner.nextLine();
         students.add(new Student(studentId, name));
-        System.out.println("✅ Student registered successfully.");
+        System.out.println(" Student registered successfully.");
     }
 
     private static void displayCourses() {
@@ -193,7 +193,7 @@ public class CourseRegistrationSystem {
         Student student = findStudentById(studentId);
         
         if (student == null) {
-            System.out.println("❌ Student not found. Please register first.");
+            System.out.println(" Student not found. Please register first.");
             return;
         }
 
@@ -207,7 +207,7 @@ public class CourseRegistrationSystem {
                 return;
             }
         }
-        System.out.println("❌ Course not found.");
+        System.out.println(" Course not found.");
     }
 
     private static void dropCourse() {
@@ -216,7 +216,7 @@ public class CourseRegistrationSystem {
         Student student = findStudentById(studentId);
 
         if (student == null) {
-            System.out.println("❌ Student not found.");
+            System.out.println("Student not found.");
             return;
         }
 
@@ -232,7 +232,7 @@ public class CourseRegistrationSystem {
         Student student = findStudentById(studentId);
 
         if (student == null) {
-            System.out.println("❌ Student not found.");
+            System.out.println(" Student not found.");
             return;
         }
 
