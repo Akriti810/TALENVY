@@ -11,7 +11,7 @@ class BankAccount {
             balance += amount;
             System.out.println(" Successfully deposited ₹" + amount);
         } else {
-            System.out.println(" Invalid deposit amount!");
+            System.out.println(" :( Invalid deposit amount!");
         }
     }
 
